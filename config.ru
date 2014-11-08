@@ -1,0 +1,3 @@
+require './cubeshape'
+
+run Cuba

@@ -1,0 +1,22 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    cuba (3.3.0)
+      rack
+    mini_magick (3.8.1)
+      subexec (~> 0.2.1)
+    rack (1.5.2)
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    racksh (1.0.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5)
+    subexec (0.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba
+  mini_magick
+  racksh
