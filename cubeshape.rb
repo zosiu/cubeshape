@@ -1,7 +1,11 @@
 require 'cuba'
+require 'cuba/render'
+require 'tilt/haml'
 require_relative 'painter'
 
-Cuba.use Rack::ContentType, 'image/png'
+Cuba.plugin(Cuba::Render)
+Cuba.settings[:render][:template_engine] = 'haml'
+
 
 Cuba.define do
   on get do
@@ -16,7 +20,7 @@ Cuba.define do
     end
 
     on root do
-      res.redirect '/cubeshape/cececece'
+      res.write partial('cubeshape')
     end
   end
 end

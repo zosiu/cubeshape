@@ -1,0 +1,117 @@
+!!!
+/[if IE 8 ] <html id='ie8' lang='en-US'>
+/ [if (gt IE 9)|!(IE)]><!
+%html
+  / <![endif]
+  %head
+    %meta{charset: 'UTF-8'}
+      %meta{content: 'width=device-width', name: 'viewport'}
+        %title Cubeshape
+        %link{href: 'http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css', media: 'all', rel: 'stylesheet', type: 'text/css'}/
+    %link{href: '/cubeshape/cececece?colors=yrb_yb_ybo_yo_yog_yr_ygr_yg&size=32', rel: 'shortcut icon'}/
+  %body
+    .container
+      %h1 cubeshape depth 0 - solved
+      .row
+        %figure#cube-cube
+          %figcaption cube-cube
+          .col-xs-1
+            %img{src: '/cubeshape/cececece?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/cececece?size=120', title: 'bottom', alt: 'cube' }
+
+
+      %h1 cubeshape depth 1
+      .row
+        %figure#kite-kite
+          %figcaption kite-kite
+          .col-xs-1
+            %img{src: '/cubeshape/ceceecec?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/ececcece?size=120', title: 'bottom', alt: 'cube' }
+          .col-m-1
+            →
+            %a{href: '#cube-cube'} cube-cube
+            %span # back to cube: /
+
+      %hr
+
+      %h1 cubeshape depth 2
+      .row
+        %figure#barrel-barrel
+          %figcaption barrel-barrel
+          .col-xs-1
+            %img{src: '/cubeshape/ecceecce?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/ceecceec?size=120&rotate=330', title: 'bottom', alt: 'cube' }
+          .col-m-1
+            →
+            %a{href: '#kite-kite'} kite-kite
+            %span  # back to cube: / (-3,-3) /
+      %hr
+
+      .row
+        %figure#fist-fist
+          %figcaption fist-fist
+          .col-xs-1
+            %img{src: '/cubeshape/eccecece?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/ececceec?size=120&rotate=330', title: 'bottom', alt: 'cube' }
+
+          .col-m-1
+            →
+            %a{href: '#kite-kite'} kite-kite
+            %span # back to cube: / (-3, 0) /
+
+      %hr
+
+      %h1 cubeshape depth 3
+      .row
+        %figure#shield-shield
+          %figcaption shield-shield
+          .col-xs-1
+            %img{src: '/cubeshape/cceeceec?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/ceecccee?size=120', title: 'bottom', alt: 'cube' }
+
+          .col-m-1
+            →
+            %a{href: '#barrel-barrel'} barrel-barrel
+            %span # back to cube: / (1, 0) / (-3, -3) /
+
+      %hr
+
+      .row
+        %figure#scallop-scallop
+          %figcaption scallop-scallop
+          .col-xs-1
+            %img{src: '/cubeshape/eeccccee?size=120', title: 'top', alt: 'cube' }
+          .col-xs-1
+            %img{src: '/cubeshape/cceeeecc?size=120&rotate=330', title: 'bottom', alt: 'cube' }
+
+          .col-m-1
+            →
+            %a{href: '#barrel-barrel'} barrel-barrel
+            %span # back to cube: / (-1, -2) / (-3, -3) /
+
+      %hr
+
+      %h1 adjacent corner swap
+      .row
+        .col-xs-1
+          %img{src: '/cubeshape/cececece?size=100&colors=ygr_yr_ybo_yo_yog_yg_yrb_yb', title: 'top', alt: 'cube' }
+
+        .col-m-1
+          %span # alg: / (3, -3) / (-3, 0) / (0, 3) / (0, -3) / (0, 3) /
+
+
+      %hr
+
+      %h1 diagonal corner swap
+      .row
+        .col-xs-1
+          %img{src: '/cubeshape/cececece?size=100&colors=ygr_yr_yog_yg_ybo_yo_yrb_yb', title: 'top', alt: 'cube' }
+
+        .col-m-1
+          %span # alg: / (-3, -3) / (3, 0) / (-3, -3) / (3, 0) / (-3, -3) /
+
