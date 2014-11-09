@@ -1,6 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'cuba'
-gem 'mini_magick'
+gem 'rmagick', require: 'RMagick'
 
-gem 'racksh', group: :development
+gem 'unicorn'
+
+group :development do
+  gem 'racksh'
+  gem 'foreman'
+end

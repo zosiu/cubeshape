@@ -3,20 +3,33 @@ GEM
   specs:
     cuba (3.3.0)
       rack
-    mini_magick (3.8.1)
-      subexec (~> 0.2.1)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    foreman (0.75.0)
+      dotenv (~> 0.11.1)
+      thor (~> 0.19.1)
+    kgio (2.9.2)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
     racksh (1.0.0)
       rack (>= 1.0)
       rack-test (>= 0.5)
-    subexec (0.2.3)
+    raindrops (0.13.0)
+    rmagick (2.13.3)
+    thor (0.19.1)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   cuba
-  mini_magick
+  foreman
   racksh
+  rmagick
+  unicorn

@@ -1,13 +1,18 @@
 require 'cuba'
+require_relative 'painter'
+
+Cuba.use Rack::ContentType, 'image/png'
 
 Cuba.define do
   on get do
-    on 'ohai' do
-      res.write 'O HAI'
+    on 'cubeshape/:shape' do |shape|
+      size = req.params['size'] || 200
+      res.headers['Content-Type']  = 'image/png'
+      res.write Painter.new(size.to_i).shape_blob(shape)
     end
 
     on root do
-      res.redirect '/ohai'
+      res.redirect '/cubeshape/cececece'
     end
   end
 end
