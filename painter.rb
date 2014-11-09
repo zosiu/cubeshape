@@ -12,7 +12,7 @@ class Painter
 
   def shape_vector(shape = 'cececece')
     rvg = RVG.new(size.in, size.in).viewbox(0, 0, 150, 150) do |canvas|
-            canvas.background_fill = 'white'
+            # canvas.background_fill = 'white'
             rotate = 0.0
             shape.each_char do |char|
               case char
