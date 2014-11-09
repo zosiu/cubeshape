@@ -11,7 +11,7 @@ class Painter
   end
 
   def shape_vector(shape = 'cececece')
-    rvg = RVG.new(size.in, size.in).viewbox(0, 0, 150, 150) do |canvas|
+    rvg = RVG.new(size.in, size.in).viewbox(0, 0, 180, 180) do |canvas|
             # canvas.background_fill = 'white'
             rotate = 0.0
             shape.each_char do |char|
@@ -41,8 +41,11 @@ class Painter
       a = 50
       b = 13.4
       c.polygon(0, 0, -b, a, -a, a, -a, b).styles(fill: 'orange')
+
       c.line(0, 0, -b, a)
       c.line(0, 0, -a, b)
+      c.line(-b, a, -a, a)
+      c.line(-a, b, -a, a)
     end
   end
 
@@ -51,8 +54,10 @@ class Painter
     b = 13.4
     canvas.g.translate(canvas.width / 2.0, canvas.height / 2.0).rotate(30 + rotate) do |c|
       c.polygon(0, 0, b, a, -b, a).styles(fill: 'red')
+
       c.line(0, 0, b, a)
       c.line(0, 0, -b, a)
+      c.line(b, a, -b, a)
     end
   end
 end
