@@ -10,27 +10,28 @@ class Painter
     @size = size_in_pixels / RVG::dpi.to_f
   end
 
-  def shape_vector(shape = 'cececece', colors = [])
+  def shape_vector(shape = 'cececece', options = {})
+    colors = options[:colors] || []
+    rotate = options[:rotate] || 0.0
     no_stickers = colors.size <= shape.size
     rvg = RVG.new(size.in, size.in).viewbox(0, 0, 180, 180) do |canvas|
-            rotate = 0.0
             shape.each_char do |char|
               case char
               when 'c'
-                options = {}
-                options[:rotate] = rotate
-                options[:color] = color(colors.shift)
-                options[:left_sticker_color] = color(colors.shift) unless no_stickers
-                options[:right_sticker_color] = color(colors.shift) unless no_stickers
-                corner canvas, options
+                poptions = {}
+                poptions[:rotate] = rotate
+                poptions[:color] = color(colors.shift)
+                poptions[:left_sticker_color] = color(colors.shift) unless no_stickers
+                poptions[:right_sticker_color] = color(colors.shift) unless no_stickers
+                corner canvas, poptions
                 rotate += 60.0
               when 'e'
-                options = {}
-                options[:rotate] = rotate
-                options[:color] = color(colors.shift)
-                options[:sticker_color] = color(colors.shift) unless no_stickers
+                poptions = {}
+                poptions[:rotate] = rotate
+                poptions[:color] = color(colors.shift)
+                poptions[:sticker_color] = color(colors.shift) unless no_stickers
 
-                edge canvas, options
+                edge canvas, poptions
                 rotate += 30.0
               end
             end
@@ -38,8 +39,8 @@ class Painter
     rvg.draw
   end
 
-  def shape_blob(shape = 'cececece', colors = [])
-    vector = shape_vector(shape, colors)
+  def shape_blob(shape = 'cececece', options = {})
+    vector = shape_vector(shape, options)
     vector.format = 'png'
     vector.to_blob
   end
