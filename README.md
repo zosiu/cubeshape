@@ -38,18 +38,18 @@ Examples
 ![](https://cubeshape.herokuapp.com/cubeshape/eeccccc "default colors, default size")
 
 
-**size set to 350** `/eeeecceeee?size=350`
+**size set to 250** `/eeeecceeee?size=250`
 
-![](https://cubeshape.herokuapp.com/cubeshape/eeeecceeee?size=350 "size set to 350")
+![](https://cubeshape.herokuapp.com/cubeshape/eeeecceeee?size=250 "size set to 250")
 
 **colored pieces** `/eccecece?colors=wwyyyyyy`
 
 ![](https://cubeshape.herokuapp.com/cubeshape/eccecece?colors=wwyyyyyy "colored pieces")
 
-**colored pieces with side stickers** `/ceceecec?&colors=yrb_yb_ybo_yo_wr_wr_g_wg_wgo`
+**colored pieces with side stickers** `/ceceecec?colors=yrb_yb_ybo_yo_wr_wr_g_wg_wgo`
 
-![](https://cubeshape.herokuapp.com/cubeshape/ceceecec?&colors=yrb_yb_ybo_yo_wr_wr_g_wg_wgo "colored pieces with side stickers")
+![](https://cubeshape.herokuapp.com/cubeshape/ceceecec?colors=yrb_yb_ybo_yo_wr_wr_g_wg_wgo "colored pieces with side stickers")
 
-**parity** `/cececece?&colors=yrb_yb_ybo_yo_yog_yr_ygr_yg`
+**parity** `/cececece?colors=yrb_yb_ybo_yo_yog_yr_ygr_yg`
 
-![](https://cubeshape.herokuapp.com/cubeshape/cececece?&colors=yrb_yb_ybo_yo_yog_yr_ygr_yg "parity")
+![](https://cubeshape.herokuapp.com/cubeshape/cececece?colors=yrb_yb_ybo_yo_yog_yr_ygr_yg "parity")
